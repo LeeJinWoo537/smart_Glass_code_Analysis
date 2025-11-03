@@ -122,7 +122,7 @@ tts = gTTS(text=text, lang='ko')
 
 # 음성을 메모리에서 바로 재생하기 위한 바이너리 데이터로 변환
 fp = io.BytesIO()
-tts.save(fp)
+tts.write_to_fp(fp)
 fp.seek(0)
 
 # pygame 초기화
